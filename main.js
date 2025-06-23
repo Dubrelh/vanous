@@ -451,7 +451,7 @@ const produit = [
         "statu": ""
     },
     {
-        "img": "images/cupcake.png",
+        "img": "images/cupcake.jpg",
         "nom": "Cupcakes",
         "description": "Délicieux cupcakes, aux differentes saveurs. box de 6",
         "categorie": "gateaux",
@@ -463,7 +463,7 @@ const produit = [
         "nom": "Gateau chocolat",
         "description": "Moelleux et fondant au chocolat",
         "categorie": "gateaux",
-        "prix": 6500,
+        "prix": 9000,
         "statu": ""
     },
     {

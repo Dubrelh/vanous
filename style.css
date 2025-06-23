@@ -89,8 +89,15 @@ header nav a:focus::after {
     align-items: center;
 }
 
+.baniere h1{
+    color: gold;
+    font-weight: bold;
+    margin: 0;
+}
+
 .baniere h2{
     text-align: center;
+    margin-top: 0;
     color: white;
     font-weight: bold;
 }
@@ -770,7 +777,7 @@ html {
         top: 85%;
     }
     #notif{
-        top: 82%;
+        top: 83%;
         left: 88%;
     }
     .commande-form{

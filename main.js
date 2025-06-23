@@ -62,6 +62,8 @@ ferme.addEventListener('click', function(){
         mount.pop();
     }
 
+    err.textContent = ''
+
     console.log(mount)
 })
 
@@ -72,12 +74,12 @@ ferme.addEventListener('click', function(){
 
 let compte = 1
 
-function moin(){
-    // const aff = element.nextElementSibling;
-    let aff = document.querySelector('.aff')
+function moin(element){
+    // const aff = element.previousElementSibling;   
+    const affe = element.closest('div[id]').querySelector(".qte p[id]");
     compte--;
-    aff.textContent = compte
-    console.log(aff.textContent)
+    affe.textContent = compte
+    console.log(affe.textContent)
 }
 
 function plus(element){
@@ -88,6 +90,8 @@ function plus(element){
     console.log(affe.textContent)
 }
 
+let check = 0
+let notif = document.getElementById('notif')
 
 function valid(element){
 
@@ -138,6 +142,12 @@ function valid(element){
     console.log(mount)
     console.log(typeof(mount))
 
+    check++
+
+    notif.textContent = check
+    notif.style.color = 'red'
+    notif.style.backgroundColor = 'beige'
+
 }
 
 function annuler(element){
@@ -153,13 +163,34 @@ function annuler(element){
 
     tot = tot - mod.textContent
     total.textContent = "Montant : " + tot + "fcfa"
+
+    // renitialiser le compteur
+
+    check--
+    notif.textContent = check
+    if(check === 0){
+    notif.style.color = 'transparent'
+    notif.style.backgroundColor = 'transparent'
+    }
+
 }
 
 
 // valider commande
 
+let err = document.getElementById('err')
+
 function envoyerCommandeWhatsApp() {
-    // Récupère le tableau des commandes
+
+    if(check === 0){
+
+        err.textContent = "Votre panier est vide" 
+        err.style.color = "red"
+        err.style.opacity = "0.4"
+
+    }else{
+
+        // Récupère le tableau des commandes
     let table = document.getElementById('table');
     let lignes = table.querySelectorAll('tr');
     let message = "Bonjour, je souhaite commander :%0A";
@@ -182,8 +213,10 @@ function envoyerCommandeWhatsApp() {
     let numero = "237691317683";
     let url = `https://wa.me/${numero}?text=${message}`;
     window.open(url, '_blank');
-}
 
+    }
+
+}
 
 
 // commande speciale
@@ -395,10 +428,10 @@ for(let j = 0; j < produit.length; j++){
 const produit = [
     {
         "img": "images/beignet.png",
-        "nom": "Beignet",
+        "nom": "Beignet soufflé",
         "description": "Lot de beignets sucrés ,10 pièces",
         "categorie": "mignardise",
-        "prix": 1000,
+        "prix": 2000,
         "statu": "best"
     },
     {
@@ -406,7 +439,7 @@ const produit = [
         "nom": "Cake marbré",
         "description": "Moelleux et savoureux",
         "categorie": "gateaux",
-        "prix": 2500,
+        "prix": 3500,
         "statu": ""
     },
     {
@@ -420,9 +453,9 @@ const produit = [
     {
         "img": "images/cupcake.png",
         "nom": "Cupcakes",
-        "description": "Délicieux cupcakes, aux differentes saveurs",
+        "description": "Délicieux cupcakes, aux differentes saveurs. box de 6",
         "categorie": "gateaux",
-        "prix": 1500,
+        "prix": 5000,
         "statu": "best"
     },
     {
@@ -438,15 +471,15 @@ const produit = [
         "nom": "Gateau d'anniversaire",
         "description": "Personnalisé pour vos événements",
         "categorie": "gateaux",
-        "prix": 6500,
+        "prix": 9000,
         "statu": ""
     },
     {
         "img": "images/pack.png",
-        "nom": "Pack gourmand",
+        "nom": "Pack burger pastel crepes",
         "description": "Assortiment de douceurs",
         "categorie": "mignardise",
-        "prix": 4500,
+        "prix": 10000,
         "statu": ""
     },
     {
@@ -460,9 +493,9 @@ const produit = [
     {
         "img": "images/samussa.png",
         "nom": "Samoussas",
-        "description": "Savoureux samoussas aux boeuf ou au poulet, 8 pièces",
+        "description": "Savoureux samoussas aux boeuf ou au poulet, 10 pièces",
         "categorie": "mignardise",
-        "prix": 1000,
+        "prix": 2000,
         "statu": "best"
     },
     {
@@ -476,7 +509,7 @@ const produit = [
     {
         "img": "images/nems.png",
         "nom": "Nems",
-        "description": "croustillants et savoureux, 5 pièces",
+        "description": "croustillants et savoureux, 10 pièces",
         "categorie": "mignardise",
         "prix": 2000,
         "statu": "best"

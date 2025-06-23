@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <title>Acceuil</title>
+</head>
+<body id="acceuil">
+    <header>
+        <img src="vanous.png" alt="">
+        <nav>
+            <a href="acceuil.html">Acceuil</a>
+            <a href="boutique.html">Boutique</a>
+            <a href="propos.html">A propos</a>
+        </nav>
+        <i class="fas fa-bars icon" id="icon"></i>
+    </header>
+
+    <div class="menures" id = "menures">
+            <nav>
+                <i class="fas fa-xmark icon" id="close"></i>
+                <span></span>
+                <h2><U>Menu</U></h2>
+                <span></span>
+               <a href="acceuil.html">Acceuil</a>
+               <a href="boutique.html">Boutique</a>
+               <a href="propos.html">A propo</a>
+            </nav>
+    </div>
+
+    <div class="baniere">
+        <h2>Parce que chaque moment merite une touche de sucré</h2>
+        <a href="boutique.html" class="button">Commander maintenant</a>
+    </div>
+
+    <div class="comd">
+
+    <div class="final">
+        <i class="fas fa-xmark" id="fermer"></i>
+        
+        <div class="fina">
+
+            <h2>Commande</h2>
+        <table id="table">
+            <th>Nom</th><th>Quantité</th><th>prix</th><th>Annuler</th>
+        </table>
+        <div>
+            <button class="product-button finalbtn" onclick="envoyerCommandeWhatsApp()"><i class="fab fa-whatsapp"></i> comander</button>
+            <span id="total"><span></span> </span>
+        </div>
+
+        </div>
+
+    </div>
+
+    </div>
+
+    <!-- Mode de fonctionnement -->
+<div class="presentation-guide">
+    <h2>Comment ça marche ?</h2>
+    <ol>
+        <li><strong>Découvrez nos pâtisseries :</strong> Parcourez la boutique pour voir nos gâteaux, cupcakes et spécialités.</li>
+        <li><strong>Ajoutez au panier :</strong> Sélectionnez la quantité désirée et cliquez sur <i class="fas fa-cart-plus"></i> pour ajouter vos produits au panier.</li>
+        <li><strong>Validez votre commande :</strong> Cliquez sur l’icône panier en bas à droite pour voir votre sélection et finaliser votre commande.</li>
+        <li><strong>Envoyez sur WhatsApp :</strong> Cliquez sur <i class="fab fa-whatsapp"></i> Commander pour envoyer automatiquement votre commande sur WhatsApp. Nous vous contacterons rapidement pour la confirmation !</li>
+    </ol>
+    <p class="astuce"><i class="fas fa-info-circle"></i> Astuce : Pour une demande spéciale, utilisez le formulaire dédié dans la boutique, rubrique "Spécial".</p>
+</div>
+
+
+
+    <div class="comd">
+
+    <div class="final">
+        <i class="fas fa-xmark icon" id="fermer"></i>
+        <h2>Commande</h2>
+        <table>
+            <th>Nom</th><th>Quantité</th><th>prix</th>
+        </table>
+        <div>
+            <button class="product-button finalbtn"><i class="fab fa-whatsapp"></i> comander</button>
+            <span id="total">Montant total <span></span> </span>
+        </div>
+    </div>
+
+    </div>
+
+
+
+    <section >
+
+        <span> <span></span> </span>
+
+        <h1> Nos best-seller </h1>
+
+        <div class="section" id="section">
+
+       </div>
+
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; henry Fotso, elvira Ngniepi. Tous droits réservés.</p>
+            <nav class="footer-nav">
+                <a href="acceuil.html">Accueil</a> |
+                <a href="boutique.html">Nos pâtisseries</a> |
+                <a href="propos.html">À propos</a> |
+            </nav>
+            <div class="footer-contact">
+                <p><strong>Contact :</strong></p>
+                <p>Téléphone : <a href="tel:+237 6 91 31 76 83">+237 6 91 31 76 83</a></p>
+                <p>Email : <a href="mailto:vanouscake@gmail.com">vanouscake@gmail.com</a></p>
+                <p>Adresse : Douala, Cameroun</p>
+            </div>
+            <p>Suivez-nous :
+                <a href="#" title="Instagram">Instagram</a> |
+                <a href="#" title="Facebook">Facebook</a>
+            </p>
+        </div>
+    </footer>
+
+
+    <button id="panier"><i class="fas fa-cart-plus"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>

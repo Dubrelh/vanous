@@ -668,7 +668,7 @@ html {
     border-radius: 12px;
     margin: 40px auto 30px auto;
     padding: 30px 22px 22px 22px;
-    max-width: 700px;
+    width: 88%;
     color: #5C4033;
     font-family: 'Poppins', sans-serif;
     box-shadow: 0 2px 8px rgba(232,161,184,0.08);
@@ -774,6 +774,9 @@ html {
 }
 
 @media( min-width: 600px ) and (max-width: 900px){
+    .apropos-section {
+    width: 700px;
+    }
     header nav{
         left: 40%;
         top: 5px;
